@@ -1,0 +1,29 @@
+# example user config (see "hg help config" for more info)
+[ui]
+# name and email, e.g.
+# username = Jane Doe <jdoe@example.com>
+username = Jamie Border <jamie.border@uq.net.au>
+ignore = ~/.hgignore
+editor=vim
+merge = vimdiff
+
+[extensions]
+# uncomment these lines to enable some popular extensions
+# (see "hg help extensions" for more info)
+#
+#glog =
+pager =
+progress =
+color =
+
+[phases]
+publish = False
+
+# if you've added unecessary files and then stupidly run `hg revert` and removed all progress from the day, run:
+[alias]
+reinstate= !find `$HG root` -name '*.orig' -exec rename -v -f 's/.orig//' {} \;
+
+# but if you haven't yet run `hg revert`, instead run `hg revert "set:added()"` to remove the files that were added unecessarily.
+
+
+
