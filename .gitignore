@@ -5,6 +5,7 @@
 *.d
 *.pdf
 
+.gitconfig
 .ICEauthority
 .TeXworks/
 .Xauthority
